@@ -1,0 +1,37 @@
+{
+  "name": "wordcount-stream",
+  "version": "0.0.0",
+  "description": "wc stream",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jarofghosts/wordcount-stream.git"
+  },
+  "keywords": [
+    "wc",
+    "stream",
+    "wordcount",
+    "word",
+    "count",
+    "character",
+    "line"
+  ],
+  "author": "jesse keane <me@jessekeane.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jarofghosts/wordcount-stream/issues"
+  },
+  "homepage": "https://github.com/jarofghosts/wordcount-stream",
+  "dependencies": {
+    "through": "^2.3.4"
+  },
+  "devDependencies": {
+    "tape": "^2.12.3"
+  }
+}
