@@ -2,7 +2,7 @@ var through = require('through')
 
 module.exports = wc
 
-function wc(aggregate) {
+function wc(done) {
   var stream = through(write, end)
     , counts
 
@@ -26,7 +26,7 @@ function wc(aggregate) {
     count.words = (data.match(word_rex) || []).length
     count.lines = (data.match(line_rex) || []).length + 1
 
-    if(aggregate) {
+    if(done) {
       counts.characters += count.characters
       counts.words += count.words
       counts.lines += count.lines
@@ -36,7 +36,7 @@ function wc(aggregate) {
   }
 
   function end() {
-    if(aggregate) stream.queue(counts)
+    if(done) done(counts)
     stream.queue(null)
   }
 }

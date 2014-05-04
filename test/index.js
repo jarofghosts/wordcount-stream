@@ -32,18 +32,13 @@ test('counts words lines and characters', function(t) {
 })
 
 test('counts words lines and characters', function(t) {
-  var wcs = wc(true)
-    , result
+  var wcs = wc(done)
 
   t.plan(1)
 
-  wcs.on('data', function(data) {
-    result = data
-  })
-
-  wcs.on('end', function() {
+  function done(result) {
     t.deepEqual(result, {characters: 36, words: 8, lines: 9})
-  })
+  }
 
   wcs.write('lawl')
   wcs.write('derp dee doo')

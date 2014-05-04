@@ -23,8 +23,9 @@ wc.write('tu tu') // ->
 
 ## notes
 
-optionally, if a truthy value is passed as the first argument, counts will be
-aggregated and emitted at the end of the stream (not as chunks come in).
+optionally accepts as a callback as the only argument. if provided, counts
+will not be streamed as received, but instead the total will be passed to the
+callback (in the same form as outlined above).
 
 ## license
 
