@@ -9,7 +9,6 @@ a stream that acts like `wc`
 
 ```js
 var wc_stream = require('wordcount-stream')
-  , fs = require('fs')
 
 var wc = wc_stream()
 
