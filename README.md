@@ -22,8 +22,8 @@ wc.write('tu tu') // ->
 
 ## notes
 
-optionally accepts as a callback as the only argument. if provided, counts
-will not be streamed as received, but instead the total will be passed to the
+optionally accepts a callback as the only argument. if provided, counts will
+not be streamed as received, but instead the total will be passed to the
 callback (in the same form as outlined above).
 
 ## license
