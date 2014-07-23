@@ -17,14 +17,14 @@ function wc(done) {
   function write(_data) {
     var data = '' + _data
 
-    var word_rex = /\s*(\w+)\s*/g
-      , line_rex = /\n/g
+    var wordRex = /\s*(\w+)\s*/g
+      , lineRex = /\n/g
 
     var count = {}
 
     count.characters = data.length
-    count.words = (data.match(word_rex) || []).length
-    count.lines = (data.match(line_rex) || []).length + 1
+    count.words = (data.match(wordRex) || []).length
+    count.lines = (data.match(lineRex) || []).length + 1
 
     if(done) {
       counts.characters += count.characters
