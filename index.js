@@ -26,17 +26,16 @@ function wc(done) {
     count.words = (data.match(wordRex) || []).length
     count.lines = (data.match(lineRex) || []).length + 1
 
-    if(done) {
-      counts.characters += count.characters
-      counts.words += count.words
-      counts.lines += count.lines
-    } else {
-      stream.queue(count)
-    }
+    if(!done) return stream.queue(count)
+
+    counts.characters += count.characters
+    counts.words += count.words
+    counts.lines += count.lines
   }
 
   function end() {
     if(done) done(counts)
+
     stream.queue(null)
   }
 }
