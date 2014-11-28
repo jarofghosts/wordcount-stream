@@ -1,7 +1,8 @@
 wordcount-stream
-====
+================
 
-[![Build Status](https://travis-ci.org/jarofghosts/wordcount-stream.svg)](https://travis-ci.org/jarofghosts/wordcount-stream)
+[![Build Status](http://img.shields.io/travis/jarofghosts/wordcount-stream.svg?style=flat)](https://travis-ci.org/jarofghosts/wordcount-stream)
+[![npm install](http://img.shields.io/npm/dm/wordcount-stream.svg?style=flat)](https://www.npmjs.org/package/wordcount-stream)
 
 a stream that acts like `wc`
 
