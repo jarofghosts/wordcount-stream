@@ -1,6 +1,6 @@
 {
   "name": "wordcount-stream",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "wc stream",
   "main": "index.js",
   "directories": {
