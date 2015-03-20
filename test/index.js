@@ -8,9 +8,7 @@ test('counts words lines and characters', function(t) {
 
   t.plan(1)
 
-  wcs.on('data', function(data) {
-    result.push(data)
-  })
+  wcs.on('data', result.push.bind(result))
 
   wcs.on('end', function() {
     t.deepEqual(
