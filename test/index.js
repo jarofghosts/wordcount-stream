@@ -1,24 +1,24 @@
-var wc = require('../')
-
 var test = require('tape')
 
-test('counts words lines and characters', function(t) {
+var wc = require('../')
+
+test('counts words lines and characters', function (t) {
   var result = []
-    , wcs = wc()
+  var wcs = wc()
 
   t.plan(1)
 
   wcs.on('data', result.push.bind(result))
 
-  wcs.on('end', function() {
+  wcs.on('end', function () {
     t.deepEqual(
-        result
-      , [
-            {characters: 4, words: 1, lines: 1}
-          , {characters: 12, words: 3, lines: 1}
-          , {characters: 20, words: 4, lines: 6}
-          , {characters: 0, words: 0, lines: 1}
-        ]
+      result,
+      [
+        {characters: 4, words: 1, lines: 1},
+        {characters: 12, words: 3, lines: 1},
+        {characters: 20, words: 4, lines: 6},
+        {characters: 0, words: 0, lines: 1}
+      ]
     )
   })
 
@@ -29,12 +29,12 @@ test('counts words lines and characters', function(t) {
   wcs.end()
 })
 
-test('counts words lines and characters', function(t) {
+test('counts words lines and characters', function (t) {
   var wcs = wc(done)
 
   t.plan(1)
 
-  function done(result) {
+  function done (result) {
     t.deepEqual(result, {characters: 36, words: 8, lines: 9})
   }
 
